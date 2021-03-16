@@ -1,0 +1,47 @@
+@import 'vendors';
+@import 'variables';
+@import 'mixins';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-style: normal;
+  color: $darken-gray;
+  overflow-x: hidden;
+  min-width: $body-min-width;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import '_blocks/blocks';
