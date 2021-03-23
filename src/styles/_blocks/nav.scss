@@ -37,7 +37,9 @@
       left: 0;
       right: 0;
       top: calc(100% + 19px);
-      background-color: $black;
+      background-color: $blue;
+      text-align: center;
+      padding: 28px 0;
     }
 
     &--show {
