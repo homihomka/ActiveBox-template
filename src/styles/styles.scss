@@ -16,8 +16,7 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  font-style: normal;
-  color: $darken-gray;
+  color: $white;
   overflow-x: hidden;
   min-width: $body-min-width;
 }
@@ -37,6 +36,7 @@ ul {
 
 a {
   text-decoration: none;
+  font-family: inherit;
 }
 
 img {

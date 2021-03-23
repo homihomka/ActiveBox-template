@@ -24,7 +24,7 @@ const postcss = require('gulp-postcss');
 const reporter = require('postcss-reporter');
 const postcssScss = require('postcss-scss');
 const fs = require('fs');
-const stylelintConfig = fs.readFileSync('.stylelintrc', 'utf8');
+const stylelintConfig = JSON.parse(fs.readFileSync('./.stylelintrc', 'utf-8'));
 
 // Config directories
 const dirs = {

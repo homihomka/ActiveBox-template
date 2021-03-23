@@ -1,2 +1,149 @@
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 40px;
+  padding-top: 45px;
+
+  @media (max-width: $md-max-width) {
+    padding-top: 30px;
+  }
+
+  @media (max-width: $sm-max-width) {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    opacity: 0.15;
+    background-color: $white;
+  }
+
+  &__list {
+    display: flex;
+
+    @media (max-width: $sm-max-width) {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 19px);
+      background-color: $black;
+    }
+
+    &--show {
+      @media (max-width: $sm-max-width) {
+        display: block;
+      }
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+  }
+
+  &__item {
+    margin-right: 60px;
+
+    @media (max-width: $md-max-width) {
+      margin-right: 30px;
+    }
+
+    @media (max-width: $sm-max-width) {
+      margin-right: 0;
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.75;
+
+    &:focus,
+    &:hover {
+      color: $pink;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+
+    @media (max-width: $sm-max-width) {
+      padding: 15px;
+      display: block;
+    }
+  }
+
+  &__menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    height: 36px;
+    width: 45px;
+    padding: 5px;
+    flex-shrink: 0;
+
+    @media (max-width: $md-max-width) {
+      margin-top: -3px;
+      margin-bottom: -4px;
+    }
+
+    @media (max-width: $sm-max-width) {
+      display: block;
+    }
+  }
+
+  &__toggle-hamburger {
+    display: block;
+    height: 2px;
+    background-color: $white;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 35px;
+      height: 2px;
+      background-color: $white;
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+
+    &--cross {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
