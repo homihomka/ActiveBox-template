@@ -1,0 +1,20 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  &__icon {
+    color: $white;
+    transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    color: $pink;
+    transform: scale(2.2);
+  }
+
+  &__icon:active {
+    opacity: 0.8;
+  }
+}

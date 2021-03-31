@@ -15,6 +15,10 @@
     @media (max-width: $lg-max-width) {
       width: 50%;
     }
+
+    @media (max-width: $xs-max-width) {
+      width: 100%;
+    }
   }
 
   &__image {
