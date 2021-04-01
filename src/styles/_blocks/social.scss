@@ -3,15 +3,26 @@
   flex-wrap: wrap;
   margin: 0 auto;
 
+  &__item {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &__icon {
     color: $white;
+    border: 2px solid $white;
+    padding: 11px;
+    text-align: center;
     transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   }
 
   &__icon:hover,
   &__icon:focus {
     color: $pink;
-    transform: scale(2.2);
+    transform: scale(1.2);
   }
 
   &__icon:active {
